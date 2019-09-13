@@ -3,7 +3,7 @@
 </nav>
 
 <div class="destinations-container">
-  <div class="destination">
+  <div class="destination" *ngFor="let destination of destinations">
     <div class="display-as-card">
       <div class="destination-title"> {{ destination.name }} </div>
       <div class="destination-details">
