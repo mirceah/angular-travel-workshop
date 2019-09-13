@@ -31,3 +31,36 @@
 .nav-links .active {
   background-color: rgba(255, 255, 255, 0.3);
 }
+
+/**** Destination details styling ****/
+.destinations-container {
+  width: 500px;
+  margin: 10px auto;
+}
+
+.destination {
+  border: 1px solid black;
+  border-radius: 7px;
+  padding: 10px;
+  max-width: 500px;
+  min-width: 300px;
+  margin-bottom: 10px;
+}
+
+.destination-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding-bottom: 10px;
+  color: #333
+}
+
+.destination-details {
+  display: grid;
+  grid-template-columns: 2fr 7fr;
+  grid-row-gap: 5px;
+}
+
+.destination-details .label {
+  color: #333;
+  font-weight: bold;
+}
