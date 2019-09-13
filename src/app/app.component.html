@@ -5,14 +5,14 @@
 <div class="destinations-container">
   <div class="destination">
     <div class="display-as-card">
-      <div class="destination-title"> Middle-earth </div>
+      <div class="destination-title"> {{ destination.name }} </div>
       <div class="destination-details">
         <div class="label">Summary</div>
-        <div> O lume minunata</div>
+        <div> {{ destination.summary }}</div>
         <div class="label">Description</div>
-        <div> E-o lume minunata in care veti gasi, Numai copii, O lume cu mult soare si mii de jucarii</div>
+        <div> {{ destination.description }} </div>
         <div class="label">Price</div>
-        <div> 1000 $ </div>
+        <div> {{ destination.price }} $ </div>
       </div>
     </div>
   </div>
