@@ -12,13 +12,13 @@
         <div class="label">Description</div>
         <div> {{ destination.description }} </div>
         <div class="label">Price</div>
-        <div> {{ destination.price }} $ </div>
+        <div> {{ destination.price | currency: USD }} </div>
       </div>
     </div>
     <div class="display-as-list" *ngIf="isList">
       <span class="title"> {{ destination.name }} </span> - 
       <span class="summary"> {{ destination.summary }} </span>
-      <span class="price"> {{ destination.price }} $</span>
+      <span class="price"> {{ destination.price | currency: USD }} </span>
     </div>
   </div>
 </div>
