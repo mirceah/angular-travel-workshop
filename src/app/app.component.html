@@ -4,7 +4,7 @@
 
 <div class="destinations-container">
   <div class="destination" *ngFor="let destination of destinations">
-    <div class="display-as-card">
+    <div class="display-as-card" *ngIf="!isList">
       <div class="destination-title"> {{ destination.name }} </div>
       <div class="destination-details">
         <div class="label">Summary</div>
@@ -15,12 +15,10 @@
         <div> {{ destination.price }} $ </div>
       </div>
     </div>
-    <!-- 
-    <div class="display-as-list">
+    <div class="display-as-list" *ngIf="isList">
       <span class="title"> {{ destination.name }} </span> - 
       <span class="summary"> {{ destination.summary }} </span>
       <span class="price"> {{ destination.price }} $</span>
     </div>
-    -->
   </div>
 </div>
