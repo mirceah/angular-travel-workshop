@@ -79,3 +79,23 @@
 .display-as-list .price {
   float: right;
 }
+
+/**** Button list/cards ****/
+.display-toggle {
+  text-align: right;
+  padding: 10px;
+}
+
+.display-toggle button {
+  background-color: #005b96;
+  color: #ffffff;
+  padding: 5px 10px;
+  border: 1px solid #005b96;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.display-toggle button:hover {
+  background-color: #138ad7;
+  border-color: #138ad7;
+}

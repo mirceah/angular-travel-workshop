@@ -25,4 +25,8 @@ export class AppComponent  {
       isFavorite: false,
     }
   ];
+
+  toggleDisplay() {    
+    // accesarea proprietatatii 'isList' din clasa AppComponent se face astfel: this.isList
+  }
 }

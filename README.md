@@ -124,3 +124,42 @@ The hero's name is Darth Vader
 1. Adauga pipe-ul `currency: USD` pentru `destination.price` si sterge currency-ul adaugat static (`$`)
 
 **Hint**: Nu uita sa folosesti `|` dupa `destination.price`. Aceasta sintaxa indica faptul ca se foloseste un pipe.
+___
+# 6. Event Bindings
+Un **event binding** este o metoda prin care putem executa cod Javascript atunci cand se declanseaza evenimentul.
+
+Sintaxa: `(event)="statement"`
+
+Exemplu:
+```javascript
+// Component Typescript code
+deleteProduct() {
+  console.log('Product is being removed.');
+}
+
+// Component template HTML code
+<button (click)="deleteProduct()">Delete product</button>
+```
+
+Ele reprezinta modul prin care actualizezi starea aplicatiei in urma unei actiuni.
+
+Intre ghilimele se pune un **template statement** (cod javascript sau apel de functie).
+
+## Task
+1. Deschide template-ul componentei AppComponent
+1. Gaseste butonul cu textul "List/Cards"
+1. Conecteaza evenimentul `click` la metoda `toggleDisplay` pentru a schimba afisarea destinatiilor
+    - **Hint** foloseste proprietatea `isList` in metoda `toggleDisplay`
+2. Folosind interpolarea, afiseaza butonul cu textul "List" atunci cand destinatiile sunt afisate sub forma de cards si cu textul "Card" atunci cand destinatiile sunt afisate sub forma de lista.
+    - **Hint** Foloseste *conditional (ternary) operator* in interpolare
+        ```javascript
+          // HTML
+          <p>{{ isTrue ? 'Adevarat' : 'Fals' }} </p>
+          
+          // Rezultat cand isTrue === true
+          <p> Adevarat </p>
+        ```
+
+***!Info***: *Ce este un card?*
+
+Card-urile sunt blocuri mici, similare ca design, dar cu continut diferit. Un card poate contine orice tip de continut - imagini, text, link-uri etc.
