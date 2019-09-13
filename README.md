@@ -163,3 +163,39 @@ Intre ghilimele se pune un **template statement** (cod javascript sau apel de fu
 ***!Info***: *Ce este un card?*
 
 Card-urile sunt blocuri mici, similare ca design, dar cu continut diferit. Un card poate contine orice tip de continut - imagini, text, link-uri etc.
+___
+# 7. Components
+Componentele reprezinta modul in care Angular organizeaza si incapsuleaza (izoleaza) continutul.
+  - HTML - structura si continut
+  - CSS - stil
+  - Typescript - logica
+
+Ele pot fi refolosite in alte componente, devenind astfel componente copil, la fel cum se intampla si cu elementele (tag-urile) HTML.
+```javascript
+  <div>                 // Tag parinte
+    <p>some text</p>    // Tag copil
+  </div>
+
+  <component-parent>                    // Tag componenta parinte
+    <component-child></component-child> // Tag componenta copil
+  </component-parent>
+```
+
+### Task
+In folderul `src/app` au fost create urmatoarele fisiere:
+  - favorite-destination.component.css
+  - favorite-destination.component.html
+  - favorite-destination.component.ts
+
+1. Decomenteaza codul care ii spune lui Angular ca `FavoriteDestinationComponent` este o componenta.
+    - **Q:** Care sunt informatiile specificate in decoratorul @Component si de ce sunt necesare?
+    - **Q:** Sunt toate necesare?
+1. Afiseaza componenta `FavoriteDestinationComponent` ca si copil al lui `AppComponent` in locul indicat de comentariu.
+    - Foloseste selectorul componentei `FavoriteDestinationComponent` ca un tag HTML (cum este folosit selectorul lui `AppComponent` in `index.html`)
+    - Daca ai obtinut **Eroarea** `'app-favorite-destination' is not a known element` inseamna ca ai reusit
+    - **Q:** De ce avem aceasta eroare?
+1. Asculta indemnul erorii.
+    - **Hint:** Exista vreo componenta pe care o putem folosi ca exemplu pentru a rezolva eroarea?
+1. Adauga o proprietate `isFavorite` in clasa `FavoriteDestinationComponent` si afiseaza o stea plina doar cand `isFavorite` este true.
+    - **Hint** vezi *conditional (ternary) operator* de la task-ul din capitolul anterior
+    - **Q:** de ce am folosit ghilimele pentru 'star' si 'star_outline'
