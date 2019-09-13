@@ -98,3 +98,29 @@ Nu, vreau sa invat Angular
     - **Hint:** In HTML orice se afla intre `<!--` si `-->` este comentat.
 2. Adauga directiva `*ngIf` astfel incat destinatiile sa fie afisate **doar** sub forma de lista. Variabila `isList` reprezinta conditia de afisare.
 ___
+# 5. Pipes
+In template ajunge, de multe ori, continut dinamic. Acesta, sau o parte din acesta, are nevoie de formatare.
+
+De exemplu, vreau ca un text adaugat prin interpolare in template, sa inceapa intotdeauna cu prima litera mare, sau vreau sa fie tot textul uppercase, sau textul este un numar si vreau sa aiba maxim doua zecimale etc.
+
+Pipe-urile sunt o metoda buna de a formata string-uri, sume valutare, date de calendar etc. Angular are pipe-uri predefinite (ex. `titlecase`) dar se pot crea si pipe-uri custom.
+
+Sintaxa: `{{ elementToTransform | pipeName }}`
+
+Exemplu:
+```javascript
+// Component Typescript code
+name = 'darth vader'
+
+// Component template HTML code
+<p> The hero's name is {{ name | titlecase }} </p>
+
+// Result
+The hero's name is Darth Vader
+```
+
+### Task
+1. Deschide template-ul componentei AppComponent
+1. Adauga pipe-ul `currency: USD` pentru `destination.price` si sterge currency-ul adaugat static (`$`)
+
+**Hint**: Nu uita sa folosesti `|` dupa `destination.price`. Aceasta sintaxa indica faptul ca se foloseste un pipe.

@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent  {
   name = 'meTravel';
-  isList = true;
+  isList = false;
 
   destinations = [
     {
