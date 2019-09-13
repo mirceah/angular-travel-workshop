@@ -5,6 +5,6 @@
 1. Editeaza-l astfel incat sa afiseze `M-ai editat, deci se dezlantuie magia`
 
 #### Bonus
-Gaseste fisierul HTML in care AppComponent este reprezentat printr-un tag html.
+Gaseste fisierul HTML in care AppComponent este reprezentat printr-un tag HTML.
 
 **Hint**: AppComponent defineste tag-ul HTML in decoratorul `@Component`
