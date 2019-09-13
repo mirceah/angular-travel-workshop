@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent  {
   name = 'meTravel';
+  isList = true;
 
   destinations = [
     {
@@ -24,6 +25,4 @@ export class AppComponent  {
       isFavorite: false,
     }
   ];
-
-  destination = this.destinations[0];
 }

@@ -76,3 +76,25 @@ Element: three
 1. Adauga directiva `*ngFor` astfel incat sa fie afisate toate destinatiile din array-ul `destinations`
 
 **Hint**: Nu uita sa folosesti (`*`) in fata lui **`ngFor`**. Aceasta sintaxa indica faptul ca este o directiva structurala: `<div class="destination" *ngFor="let destination of destinations">`
+
+## 4.2. *ngIf
+`*ngIf` controleaza afisarea unui element HTML, in functie de o conditie.
+
+```javascript
+// Component Typescript code
+vreau = true;
+
+// Component template HTML code
+<p> Nu <span *ngIf="!vreau">, </span> vreau sa invat Angular </p>
+<p> Nu <span *ngIf="vreau">, </span> vreau sa invat Angular </p>
+
+// Result
+Nu vreau sa invat Angular
+Nu, vreau sa invat Angular
+```
+
+### Task
+1. Deschide template-ul componentei AppComponent si sterge comentariile pentru `div`-ul cu clasa `display-as-list`. 
+    - **Hint:** In HTML orice se afla intre `<!--` si `-->` este comentat.
+2. Adauga directiva `*ngIf` astfel incat destinatiile sa fie afisate **doar** sub forma de lista. Variabila `isList` reprezinta conditia de afisare.
+___
