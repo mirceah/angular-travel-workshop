@@ -232,3 +232,21 @@ Componenta `FavoriteDestinationComponent` are proprietatea `isFavorite`.
 1. Din `app.component.html`, configureaza proprietatea cu true, apoi cu false
     - **Q:** Se modifica afisarea din componenta copil? Dar daca folosim sintaxa de binding `[isFavorite]`?
 1. Folosind data binding, legati proprietatea `isFavorite` de `destination.isFavorite`
+
+## 7.2. Component @Output
+Elementele HTML emit evenimente. Mai devreme ne-am abonat la evenimentul `(click)` al butonului 'Display as' cu functia `toggleDisplay()`.
+
+Componentele Angular pot face acelasi lucru: sa emita evenimente si ne abonam la aceste evenimente folosind aceeasi sintaxa.
+
+### Task
+Vom modifica componenta `FavoriteDestinationComponent` astfel incat sa emita evenimentul `favClick` cand este clickaita stelutza.
+
+1. Adauga proprietatea `favClick` de tip `@Output` in componenta `FavoriteDestinationComponent`
+    - **Hint:** `@Output() favClick = new EventEmitter();`
+    - **Q:** all good? Poate ar trebui sa importam directiva `Output` de undeva?
+    - **Q:** now? Developer tools ce zice? (Hit F12)
+1. Emite evenimentul `favClick` atunci cand se face click pe steluta
+    - **Hint:** `(click)="favClick.emit()"`
+1. In `AppComponent` aboneaza-te la evenimentul `favClick` al componentei `FavoriteDestinationComponent`. Schimba valoarea proprietatii `destination.isFavorite` de fiecare data cand se emite favClick.
+    - **Hint:** `destination.isFavorite = !destination.isFavorite`
+___
