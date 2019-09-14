@@ -250,3 +250,22 @@ Vom modifica componenta `FavoriteDestinationComponent` astfel incat sa emita eve
 1. In `AppComponent` aboneaza-te la evenimentul `favClick` al componentei `FavoriteDestinationComponent`. Schimba valoarea proprietatii `destination.isFavorite` de fiecare data cand se emite favClick.
     - **Hint:** `destination.isFavorite = !destination.isFavorite`
 ___
+## 7.3. More Components
+### Task 1
+Creaza o componenta care sa incapsuleze afisarea destinatiei ca si card.
+
+1. Right-click pe tree-ul proiectului -> Angular Generator -> Component -> `destination-details`
+    - **Hint:** Asigura-te ca noul director a fost creat sub src/app
+1. Muta HTML-ul care afiseaza destinatia ca si card in template-ul noii componente
+    - **Hint:** Urmareste comentariile din app.component.html
+1. Adauga selectorul componentei `DestinationDetailsComponent` in template-ul lui `AppComponent`, in locul unde era inainte cardul
+    - **Hint:** `<app-destination-details *ngIf="!isList"></app-destination-details>`
+    - **Q:** Ce se intampla daca nu folosesc directiva `*ngIf`?
+    - **Q:** Observa si explica eroarea din developer tools (F12) `TypeError: Cannot read property 'name' of undefined`
+1. Adauga o proprietate de tip `@Input` in componenta `DestinationDetailsComponent`
+    - **Hint:** `@Input() destination;`
+1. Din template-ul lui `AppComponent` transmite `destination` catre app-destination-details folosind property binding:
+    - **Hint:** `<app-destination-details [destination]="destination" *ngIf="!isList"></app-destination-details>`
+    - **Q:** De ce nu s-a aplicat stilizarea configurata in `app.component.css` in componenta copil `DestinationDetailsComponent`?
+1. Muta stilizarea din `app.component.css` in `destination-details.component.css`
+    - **Hint:** Urmareste comentariile din `app.component.css`
