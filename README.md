@@ -269,3 +269,7 @@ Creaza o componenta care sa incapsuleze afisarea destinatiei ca si card.
     - **Q:** De ce nu s-a aplicat stilizarea configurata in `app.component.css` in componenta copil `DestinationDetailsComponent`?
 1. Muta stilizarea din `app.component.css` in `destination-details.component.css`
     - **Hint:** Urmareste comentariile din `app.component.css`
+
+### Task 2
+Folosind pasii de mai sus, extrage codul pentru afisarea destinatiei ca lista intr-o componenta denumita `destination-summary`
+
