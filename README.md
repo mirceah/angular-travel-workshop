@@ -199,3 +199,36 @@ In folderul `src/app` au fost create urmatoarele fisiere:
 1. Adauga o proprietate `isFavorite` in clasa `FavoriteDestinationComponent` si afiseaza o stea plina doar cand `isFavorite` este true.
     - **Hint** vezi *conditional (ternary) operator* de la task-ul din capitolul anterior
     - **Q:** de ce am folosit ghilimele pentru 'star' si 'star_outline'
+
+## 7.1. Component @Input
+Elementele HTML sunt configurate prin atribute HTML care se mapeaza pe proprietati din Javascript.
+```
+  // HTML
+  <a title="Enteresant" href="#"> Un link interesant </a>
+
+  // Javascript
+  console.log(elementA.title)
+
+  // Console output
+  Enteresant
+```
+Trimiterea de date catre componente se face in acelasi mod, prin proprietati. Proprietatile marcate cu decoratorul `@Input()` vor putea fi folosite pentru a configura componente.
+
+```javascript
+  // Typescript
+  public class TheQuestionComponent {
+    @Input() answer;
+  }
+
+  // HTML
+  <app-the-question answer="42"></app-the-question>
+```
+
+### Task
+Componenta `FavoriteDestinationComponent` are proprietatea `isFavorite`.
+
+1. Marcheaza proprietatea ca Input
+    - **Hint:** Decoratorul `Input` face parte din `@angular/core`
+1. Din `app.component.html`, configureaza proprietatea cu true, apoi cu false
+    - **Q:** Se modifica afisarea din componenta copil? Dar daca folosim sintaxa de binding `[isFavorite]`?
+1. Folosind data binding, legati proprietatea `isFavorite` de `destination.isFavorite`
