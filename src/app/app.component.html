@@ -11,11 +11,7 @@
     <!-- Card Display -->
     <app-destination-details *ngIf="!isList" [destination]="destination"></app-destination-details>
     <!-- List Display -->
-    <div class="display-as-list" *ngIf="isList">
-      <span class="title"> {{ destination.name }} </span> - 
-      <span class="summary"> {{ destination.summary }} </span>
-      <span class="price"> {{ destination.price | currency: USD }} </span>
-    </div>
+    <app-destination-summary *ngIf="isList" [destination]="destination"></app-destination-summary>
 
     <app-favorite-destination
       [isFavorite]="destination.isFavorite"

@@ -1,0 +1,13 @@
+.display-as-list::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.display-as-list .title {
+  font-weight: bold;
+}
+
+.display-as-list .price {
+  float: right;
+}
