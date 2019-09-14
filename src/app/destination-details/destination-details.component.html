@@ -1,0 +1,11 @@
+<div class="display-as-card">
+  <div class="destination-title"> {{ destination.name }} </div>
+  <div class="destination-details">
+    <div class="label">Summary</div>
+    <div> {{ destination.summary }}</div>
+    <div class="label">Description</div>
+    <div> {{ destination.description }} </div>
+    <div class="label">Price</div>
+    <div> {{ destination.price | currency: USD }} </div>
+  </div>
+</div>

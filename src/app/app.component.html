@@ -9,17 +9,7 @@
 
   <div class="destination" *ngFor="let destination of destinations">
     <!-- Card Display -->
-    <div class="display-as-card" *ngIf="!isList">
-      <div class="destination-title"> {{ destination.name }} </div>
-      <div class="destination-details">
-        <div class="label">Summary</div>
-        <div> {{ destination.summary }}</div>
-        <div class="label">Description</div>
-        <div> {{ destination.description }} </div>
-        <div class="label">Price</div>
-        <div> {{ destination.price | currency: USD }} </div>
-      </div>
-    </div>
+    <app-destination-details *ngIf="!isList" [destination]="destination"></app-destination-details>
     <!-- List Display -->
     <div class="display-as-list" *ngIf="isList">
       <span class="title"> {{ destination.name }} </span> - 
