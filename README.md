@@ -272,4 +272,43 @@ Creaza o componenta care sa incapsuleze afisarea destinatiei ca si card.
 
 ### Task 2
 Folosind pasii de mai sus, extrage codul pentru afisarea destinatiei ca lista intr-o componenta denumita `destination-summary`
+___
+## 8. Servicii
+**Scenariu**:
+  - avem o clasa care aduce date de pe un server la un interval de timp
+  - salveaza datele intern
+  - cand avem nevoie de date, putem apela metoda `getData()` din aceasta clasa si primim datele
 
+Dorim ca aceasta clasa sa fie disponibila pentru toate partile aplicatiei. Sa fie unica (o singura instanta).
+
+In Angular, un serviciu este o instanta (singleton) a unei clase care este disponibila pentru orice parte din aplicatie folosind sistemul *Dependency Injection* al Angular-ului.
+
+Serviciile sunt locul unde poti sa imparti date intre parti din aplicatia ta. Pentru aplicatia de calatorii, `destinations.service.ts`  este locul unde "stocam" datele pentru destinatii.
+  - **Observatie**: toate fisierele de tip serviciu au in denumirea 'service'; ex: `nume-serviciu.service.ts`
+
+```javascript
+  import { Injectable } from '@angular/core';
+
+  // dependency injection decorator
+  @Injectable({
+    providedIn: 'root' // singleton
+  })
+  export class DestinationsService {
+
+    constructor() { }
+
+  }
+```
+
+### Task
+1. Muta JSON-ul `destinations` din AppComponent in DestinationsService
+1. Injecteaza serviciul in AppComponent:
+    - **Hint:** Decomenteaza din constructorul lui AppComponent `destinationsService: DestinationsService`.
+    - **Q:** De ce avem eroarea `Can't resolve all parameters for AppComponent...` in consola?
+1. Foloseste datele din serviciu pentru a popula aplicatia cu destinatiile de calatorie:
+    - **Q:** De ce nu avem nici o eroare in consola pentru cele doua componente care se asteapta sa primeasca ca input o destinatie?
+    - **Hint:** Creeaza iar proprietatea `destinations` si initializeaz-o cu `[]`. In destinations o ajunga destinatiile din serviciul DestinationsService.  
+    - In `ngOnInit` adauga logica prin care `destinations` este populat cu valorile din serviciu.
+
+
+___
