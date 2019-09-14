@@ -1,0 +1,33 @@
+.destinations-container {
+  width: 500px;
+  margin: 10px auto;
+}
+
+.destination {
+  border: 1px solid black;
+  border-radius: 7px;
+  padding: 10px;
+  max-width: 500px;
+  min-width: 300px;
+  margin-bottom: 10px;
+}
+
+/**** Button list/cards ****/
+.display-toggle {
+  text-align: right;
+  padding: 10px;
+}
+
+.display-toggle button {
+  background-color: #005b96;
+  color: #ffffff;
+  padding: 5px 10px;
+  border: 1px solid #005b96;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.display-toggle button:hover {
+  background-color: #138ad7;
+  border-color: #138ad7;
+}

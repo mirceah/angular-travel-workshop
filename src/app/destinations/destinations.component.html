@@ -1,0 +1,18 @@
+<div class="destinations-container">
+  <div class="display-toggle">
+    Display as: <button (click)="toggleDisplay()"> {{ isList ? 'Cards' : 'List' }} </button>
+  </div>
+
+  <div class="destination" *ngFor="let destination of destinations">
+    <!-- Card Display -->
+    <app-destination-details *ngIf="!isList" [destination]="destination"></app-destination-details>
+    <!-- List Display -->
+    <app-destination-summary *ngIf="isList" [destination]="destination"></app-destination-summary>
+
+    <app-favorite-destination
+      [isFavorite]="destination.isFavorite"
+      (favClick)="destination.isFavorite = !destination.isFavorite"
+    ></app-favorite-destination>
+    
+  </div>
+</div>

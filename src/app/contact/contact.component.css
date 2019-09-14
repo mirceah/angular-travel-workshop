@@ -1,0 +1,78 @@
+.contact {
+  width: 1000px;
+  margin: 0 auto;
+}
+
+.contact h1 {
+  text-align: center;
+}
+
+.add-fields {
+  width: 500px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+input {
+  padding: 5px 10px;
+}
+
+.map-address {  
+  height: 200px;
+  overflow: hidden;
+  cursor: move;
+  margin: 20px 0;
+  position: relative
+}
+
+img {
+  max-width: 100%;
+}
+
+.pin {
+  position: absolute;
+  font-size: 30px;
+  color: #be1f1f;
+  left: 500px;
+  top: 80px;
+}
+
+.btn {
+  background-color: #005b96;
+  color: #ffffff;
+  padding: 5px 10px;
+  border: 1px solid #005b96;
+  border-radius: 5px;
+  cursor: pointer;
+  width:100%;
+}
+
+.btn:hover {
+  background-color: #138ad7;
+  border-color: #138ad7;
+}
+
+fieldset > div {
+  text-align: right;
+}
+
+.add-testimonial {
+  margin-bottom: 50px;
+}
+
+.testimonial {
+  border: 1px solid #bbb;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.testimonials .message {
+  border-bottom: 1px solid #bbb;
+  font-style: italic;
+}
+
+.testimonials .name {
+  text-align: right;
+}

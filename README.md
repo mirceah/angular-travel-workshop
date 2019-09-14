@@ -309,6 +309,69 @@ Serviciile sunt locul unde poti sa imparti date intre parti din aplicatia ta. Pe
     - **Q:** De ce nu avem nici o eroare in consola pentru cele doua componente care se asteapta sa primeasca ca input o destinatie?
     - **Hint:** Creeaza iar proprietatea `destinations` si initializeaz-o cu `[]`. In destinations o ajunga destinatiile din serviciul DestinationsService.  
     - In `ngOnInit` adauga logica prin care `destinations` este populat cu valorile din serviciu.
+___
+## 9. Rutare
+### Single Page Application (SPA)
+Ce este?
 
+Daca vrem sa afisam continut in functie de URL, putem sa folosim functionalitatile de rutare Angular (*Angular router*).
 
+Angular router te ajuta sa afisezi componentele in functie de locul in care acesta se afla in aplicatie (URL).
+
+Router-ul permite navigarea dintr-un *view* (pagina/componenta) catre alt *view* pe baza actiunilor utilizatorului:
+- scrierea unui URL in bara de adrese
+- click pe link-uri din pagina
+- click pe butoanele browser-ului *Inainte* si *Inapoi* 
+
+Sintaxa pentru a defini rutele din aplicatie: `RouterModule.forRoot([...])`. 
+Modulul de rutare (router) trebuie importat in modulul care il foloseste (in cazul nostru `app.module.ts`):
+
+```javascript
+  import { RouterModule } from '@angular/router';
+
+  @NgModule({
+    imports: [ 
+      ...
+      RouterModule.forRoot([
+          { path: 'dashboard', component: DashboardComponent },
+          // for 'klm-training' in URL the KlmTrainingComponent will be loaded; 
+          // eg: https://address/klm-training
+          { path: 'klm-training', component: KlmTrainingComponent },
+          // for empty pathname you will be redirected to '/dashboard' wich will load DashboardComponent
+          { path: '', redirectTo: '/dashboard', pathMatch: 'full' }
+        ])
+      ...
+    ]
+```
+
+Pe langa modulul de rutare avem nevoie ca elementele din HTML sa solicite router-ului incarcarea unui URL: `<a routerLink="dashboard"> Dashboard </a>`.
+
+### Task
+Aplicatia are acum urmatoarea structura:
+  - **AppComponent** este componenta parinte si afiseaza
+    - Bara de navigare
+    - **DestinationsComponent**
+  - **DestinationsComponent** afiseaza destinatiile ca si card-uri sau lista infunctie de butonul *Display as*
+  - **ContactComponent** nu este afisata momentan
+
+La finalul task-ului **AppComponent**:
+  - Afiseaza intotdeauna bara de navigare
+  - Afiseaza **DestinationsComponent** sau **ContactComponent** in functie de URL folosind *Angular routing*
+
+#### Steps:
+1. Decomenteaza, modulul de rutare in `app.module.ts`
+1. Adauga inca o ruta catre pagina contact
+1. Adauga `routerLink` catre cele doua componente *anchor* (`<a>`) in bara de navigare a aplicatiei
+    - **Hint**: `<a routerLink="destinations">`
+    - **Q**: Apasa butoanele *Destinations* si *Contact* din bara de navigare. Ce se intampla? Dar in bara de adrese se modifica ceva?
+    - **Q**: De ce nu se modifica continutul paginii?
+1. Afiseaza in template-ul lui AppComponent view-urile rutate de router
+    - **Hint**: Tag-ul `<router-outlet>` (directiva importata odata cu `RouterModule`) spune router-ului unde sa afiseze view-urile rutate. 
+    - **Hint**: Template-ul lui AppComponent nu mai are nevoie sa afiseze DestinationsComponent folosind tag-ul `<app-destinations>` deoarece aplicatia va afisa aceasta componenta doar atunci cand user-ul va naviga catre ea
+    - **Q**: Ce se intampla daca folosim butoanele **Back** si **Forward** ale browser-ului?
+1. Adauga `routerLinkActive` in tag-urile de navigare `<a>`:
+    - `<a routerLink="destinations" routerLinkActive="active">`
+    - acelasi lucru si pentru *contact*
+    - **Q**: ce s-a schimbat in afisare? Cum?
+    - **Q**: Deschide *devtools* (F12) si observa elementele `<a>`. Click pe link-uri. Ce se intampla?
 ___

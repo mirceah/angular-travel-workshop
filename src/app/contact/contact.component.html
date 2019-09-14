@@ -1,0 +1,25 @@
+<div class="contact">
+  <h1>Contact</h1>
+
+  <address>
+    Written by <a href="mailto:webmaster@example.com">Jon Doe</a>.<br>
+    Visit us at:<br>
+    MidleEarthTravel.com<br>
+    Box 564, Langwell<br>
+    Forodwaith
+  </address>
+
+  <div class="map-address">
+    <img src="https://i.pinimg.com/originals/99/93/72/9993727dc7fa3809427d5f4e9eef88a4.jpg" />
+    <mat-icon class="pin">room</mat-icon>    
+  </div>
+
+  <div class="testimonials">
+    <h3>Testimonials</h3>
+    <hr />
+    <div class="testimonial" *ngFor="let testimonial of testimonials">
+      <div class="message"> "{{ testimonial.message }}" </div>
+      <div class="name"> {{ testimonial.name }} </div>
+    </div>
+  </div>
+</div>
