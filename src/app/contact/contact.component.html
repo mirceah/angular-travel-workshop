@@ -17,10 +17,10 @@
   <div class="add-testimonial">  
     <div class="add-fields">
       <label>Name:
-        <input placeholder="Your name" />    
+        <input [(ngModel)]="name" placeholder="Your name" />    
       </label>      
       <label>Testimonial:    
-        <input placeholder="Your testimonial" />
+        <input [(ngModel)]="message" placeholder="Your testimonial" />
       </label>
     </div>
     
@@ -38,7 +38,7 @@
       </div>
     </fieldset>  
   </div>
-
+  
   <div class="testimonials">
     <h3>Testimonials</h3>
     <hr />
