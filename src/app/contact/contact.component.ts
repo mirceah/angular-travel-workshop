@@ -6,6 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./contact.component.css']
 })
 export class ContactComponent {
+  
+  name = '';
+  message = '';
 
   testimonials = [
     {
@@ -17,5 +20,9 @@ export class ContactComponent {
       message: 'Caut un inel, dar nu gasesc. Inel cu inscriptia: "ash nazg thrakatulûk, agh burzum-ishi krimpatul". Toata lumea sa apeleze la mine. Ofer recompensa!'
     },
   ];
+
+  addTestimonial(name, message) {
+    this.testimonials.unshift({ name: name, message: message });
+  }
 
 }

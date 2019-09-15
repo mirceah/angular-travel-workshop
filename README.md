@@ -375,3 +375,30 @@ La finalul task-ului **AppComponent**:
     - **Q**: ce s-a schimbat in afisare? Cum?
     - **Q**: Deschide *devtools* (F12) si observa elementele `<a>`. Click pe link-uri. Ce se intampla?
 ___
+# 10. Two way binding
+Angular ne pune la dispozitie mai multe metode de a comunica cu componentele:
+
+1. **@Input**: datele sunt trimise catre componenta
+1. **@Output**: datele sunt trimise dinspre componenta (ca evenimente)
+1. **Two way binding**: datele sunt tinute in-sync (ngModel)
+
+## 10.1. `[(ngModel)]`
+ngModel ne ajuta sa sincronizam valoarea unui input din HTML cu o proprietate din logica componentei.
+```javascript
+// Typescript
+name = 'Zorro';
+// HTML
+<input [(ngModel)]="name"> // Banana in a box syntax
+```
+
+### Task 1
+Componenta `Contact` are doua input-uri folosite la adaugarea unui nou testimonial.
+
+1. Gaseste input-urile
+1. Adauga banane in cutie ca sa poti pune un nou testimonial
+1. Observa sincronizarea live
+
+### Task 2 (pentru *FB cu stelutza*)
+1. Merg in pagina `Destinatii`, apoi revino in pagina `Contact`
+1. Ce s-a schimbat? De ce?
+1. Cum oprim schimbarea? :)

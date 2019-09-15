@@ -14,6 +14,31 @@
     <mat-icon class="pin">room</mat-icon>    
   </div>
 
+  <div class="add-testimonial">  
+    <div class="add-fields">
+      <label>Name:
+        <input placeholder="Your name" />    
+      </label>      
+      <label>Testimonial:    
+        <input placeholder="Your testimonial" />
+      </label>
+    </div>
+    
+    <fieldset class="preview"> 
+      <legend> Preview </legend>      
+      <p> Name: {{ name }} </p>
+      <p> Testimonial: {{ message }} </p>      
+      <hr />      
+      <div>
+        <button 
+          class="btn"
+          (click)="addTestimonial(name, message)">
+          Share your experience
+        </button>
+      </div>
+    </fieldset>  
+  </div>
+
   <div class="testimonials">
     <h3>Testimonials</h3>
     <hr />
