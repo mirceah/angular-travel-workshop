@@ -1,13 +1,13 @@
 <nav class="nav-bar">
   <span class="logo">{{ name }}</span>
   <div class="nav-links">
-     <a>
+     <a routerLink="destinations" routerLinkActive="active">
       Destinations
     </a>
-    <a>
+    <a routerLink="contact" routerLinkActive="active">
       Contact
     </a>
   </div>
 </nav>
 
-<app-destinations></app-destinations>
+<router-outlet></router-outlet>
