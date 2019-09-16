@@ -1,6 +1,7 @@
 # angular-travel-workshop
 
 # 1. HTML is still HTML
+[Edit on StackBlitz ⚡️](https://stackblitz.com/edit/angular-travel-workshop-01)
 1. Gaseste fisierul `app.component.html`
 1. Editeaza-l astfel incat sa afiseze `M-ai editat, deci se dezlantuie magia`
 
@@ -8,6 +9,8 @@
 Gaseste fisierul HTML in care AppComponent este reprezentat printr-un tag HTML.
 
 **Hint**: AppComponent defineste tag-ul HTML in decoratorul `@Component`
+
+[Solution on StackBlitz ⚡️](https://stackblitz.com/edit/angular-travel-workshop-01-done)
 ___
 # 2. Interpolation
 ## Afisarea unei variable in HTML
@@ -24,6 +27,8 @@ myName = 'Angular Wiz Escu'
 Numele meu este Angular Wiz Escu
 ```
 
+[Edit on StackBlitz ⚡️](https://stackblitz.com/edit/angular-travel-workshop-02)
+
 ### Task
 1. Deschide template-ul componentei AppComponent (`app.component.html`)
 1. Inlocuieste textul din task-ul anterior cu proprietatea `name`
@@ -31,9 +36,14 @@ Numele meu este Angular Wiz Escu
 1. Schimba valoarea proprietatii `name`: observa ca se actualizeaza si pagina
 
 **Hint**: Nu uita sa folosesti interpolarea (`{{name}}`). Altfel va fi afisat string-ul `name` in loc de valoarea lui
+
+[Solution on StackBlitz ⚡️](https://stackblitz.com/edit/angular-travel-workshop-02-done)
 ___
 # 3. More Interpolation
 ## Afisarea proprietatilor unui obiect
+
+[Edit on StackBlitz ⚡️](https://stackblitz.com/edit/angular-travel-workshop-03)
+
 In componenta AppComponent am adaugat proprietatea `destination` ca obiect.
 Observati structura.
 
@@ -43,8 +53,14 @@ Observati structura.
 1. Modifica informatii din obiectul `destination` si observa cum se actualizeaza in pagina.
 
 **Hint**: `{{destination.name}}` acceseaza proprietatea `name` din obiectul `destination`
+
+[Solution on StackBlitz ⚡️](https://stackblitz.com/edit/angular-travel-workshop-03-done)
+
 ___
 # 4. Directive Structurale
+
+[Edit on StackBlitz ⚡️](https://stackblitz.com/edit/angular-travel-workshop-04-1)
+
 Din moment ce orice site de calatorii are mai mult de o destinatie, am adaugat un array de destinatii in AppComponent. Observati structura.
 
 Proprietatea `destination` este primul element din array-ul `destinations`.
@@ -77,7 +93,12 @@ Element: three
 
 **Hint**: Nu uita sa folosesti (`*`) in fata lui **`ngFor`**. Aceasta sintaxa indica faptul ca este o directiva structurala: `<div class="destination" *ngFor="let destination of destinations">`
 
+[Solution on StackBlitz ⚡️](https://stackblitz.com/edit/angular-travel-workshop-04-1-done)
+
 ## 4.2. *ngIf
+
+[Edit on StackBlitz ⚡️](https://stackblitz.com/edit/angular-travel-workshop-04-2)
+
 `*ngIf` controleaza afisarea unui element HTML, in functie de o conditie.
 
 ```javascript
@@ -97,8 +118,13 @@ Nu, vreau sa invat Angular
 1. Deschide template-ul componentei AppComponent si sterge comentariile pentru `div`-ul cu clasa `display-as-list`. 
     - **Hint:** In HTML orice se afla intre `<!--` si `-->` este comentat.
 2. Adauga directiva `*ngIf` astfel incat destinatiile sa fie afisate **doar** sub forma de lista. Variabila `isList` reprezinta conditia de afisare.
+
+[Solution on StackBlitz ⚡️](https://stackblitz.com/edit/angular-travel-workshop-04-2-done)
 ___
 # 5. Pipes
+
+[Edit on StackBlitz ⚡️](https://stackblitz.com/edit/angular-travel-workshop-05)
+
 In template ajunge, de multe ori, continut dinamic. Acesta, sau o parte din acesta, are nevoie de formatare.
 
 De exemplu, vreau ca un text adaugat prin interpolare in template, sa inceapa intotdeauna cu prima litera mare, sau vreau sa fie tot textul uppercase, sau textul este un numar si vreau sa aiba maxim doua zecimale etc.
@@ -124,8 +150,13 @@ The hero's name is Darth Vader
 1. Adauga pipe-ul `currency: USD` pentru `destination.price` si sterge currency-ul adaugat static (`$`)
 
 **Hint**: Nu uita sa folosesti `|` dupa `destination.price`. Aceasta sintaxa indica faptul ca se foloseste un pipe.
+
+[Solution on StackBlitz ⚡️](https://stackblitz.com/edit/angular-travel-workshop-05-done)
 ___
 # 6. Event Bindings
+
+[Edit on StackBlitz ⚡️](https://stackblitz.com/edit/angular-travel-workshop-06)
+
 Un **event binding** este o metoda prin care putem executa cod Javascript atunci cand se declanseaza evenimentul.
 
 Sintaxa: `(event)="statement"`
@@ -163,8 +194,14 @@ Intre ghilimele se pune un **template statement** (cod javascript sau apel de fu
 ***!Info***: *Ce este un card?*
 
 Card-urile sunt blocuri mici, similare ca design, dar cu continut diferit. Un card poate contine orice tip de continut - imagini, text, link-uri etc.
+
+[Solution on StackBlitz ⚡️](https://stackblitz.com/edit/angular-travel-workshop-06-done)
+
 ___
 # 7. Components
+
+[Edit on StackBlitz ⚡️](https://stackblitz.com/edit/angular-travel-workshop-07-0)
+
 Componentele reprezinta modul in care Angular organizeaza si incapsuleaza (izoleaza) continutul.
   - HTML - structura si continut
   - CSS - stil
@@ -200,7 +237,12 @@ In folderul `src/app` au fost create urmatoarele fisiere:
     - **Hint** vezi *conditional (ternary) operator* de la task-ul din capitolul anterior
     - **Q:** de ce am folosit ghilimele pentru 'star' si 'star_outline'
 
+[Solution on StackBlitz ⚡️](https://stackblitz.com/edit/angular-travel-workshop-07-0-done)
+
 ## 7.1. Component @Input
+
+[Edit on StackBlitz ⚡️](https://stackblitz.com/edit/angular-travel-workshop-07-1)
+
 Elementele HTML sunt configurate prin atribute HTML care se mapeaza pe proprietati din Javascript.
 ```
   // HTML
@@ -233,7 +275,12 @@ Componenta `FavoriteDestinationComponent` are proprietatea `isFavorite`.
     - **Q:** Se modifica afisarea din componenta copil? Dar daca folosim sintaxa de binding `[isFavorite]`?
 1. Folosind data binding, legati proprietatea `isFavorite` de `destination.isFavorite`
 
+[Solution on StackBlitz ⚡️](https://stackblitz.com/edit/angular-travel-workshop-07-1-done)
+
 ## 7.2. Component @Output
+
+[Edit on StackBlitz ⚡️](https://stackblitz.com/edit/angular-travel-workshop-07-2)
+
 Elementele HTML emit evenimente. Mai devreme ne-am abonat la evenimentul `(click)` al butonului 'Display as' cu functia `toggleDisplay()`.
 
 Componentele Angular pot face acelasi lucru: sa emita evenimente si ne abonam la aceste evenimente folosind aceeasi sintaxa.
@@ -249,8 +296,13 @@ Vom modifica componenta `FavoriteDestinationComponent` astfel incat sa emita eve
     - **Hint:** `(click)="favClick.emit()"`
 1. In `AppComponent` aboneaza-te la evenimentul `favClick` al componentei `FavoriteDestinationComponent`. Schimba valoarea proprietatii `destination.isFavorite` de fiecare data cand se emite favClick.
     - **Hint:** `destination.isFavorite = !destination.isFavorite`
+
+[Solution on StackBlitz ⚡️](https://stackblitz.com/edit/angular-travel-workshop-07-2-done)
 ___
 ## 7.3. More Components
+
+[Edit on StackBlitz ⚡️](https://stackblitz.com/edit/angular-travel-workshop-07-3-1)
+
 ### Task 1
 Creaza o componenta care sa incapsuleze afisarea destinatiei ca si card.
 
@@ -270,10 +322,21 @@ Creaza o componenta care sa incapsuleze afisarea destinatiei ca si card.
 1. Muta stilizarea din `app.component.css` in `destination-details.component.css`
     - **Hint:** Urmareste comentariile din `app.component.css`
 
+[Solution on StackBlitz ⚡️](https://stackblitz.com/edit/angular-travel-workshop-07-3-1-done)
+
 ### Task 2
+
+[Edit on StackBlitz ⚡️](https://stackblitz.com/edit/angular-travel-workshop-07-3-2)
+
 Folosind pasii de mai sus, extrage codul pentru afisarea destinatiei ca lista intr-o componenta denumita `destination-summary`
+
+[Solution on StackBlitz ⚡️](https://stackblitz.com/edit/angular-travel-workshop-07-3-2-done)
+
 ___
 ## 8. Servicii
+
+[Edit on StackBlitz ⚡️](https://stackblitz.com/edit/angular-travel-workshop-08)
+
 **Scenariu**:
   - avem o clasa care aduce date de pe un server la un interval de timp
   - salveaza datele intern
@@ -309,8 +372,14 @@ Serviciile sunt locul unde poti sa imparti date intre parti din aplicatia ta. Pe
     - **Q:** De ce nu avem nici o eroare in consola pentru cele doua componente care se asteapta sa primeasca ca input o destinatie?
     - **Hint:** Creeaza iar proprietatea `destinations` si initializeaz-o cu `[]`. In destinations o ajunga destinatiile din serviciul DestinationsService.  
     - In `ngOnInit` adauga logica prin care `destinations` este populat cu valorile din serviciu.
+
+[Solution on StackBlitz ⚡️](https://stackblitz.com/edit/angular-travel-workshop-08-done)
+
 ___
 ## 9. Rutare
+
+[Edit on StackBlitz ⚡️](https://stackblitz.com/edit/angular-travel-workshop-09)
+
 ### Single Page Application (SPA)
 Ce este?
 
@@ -374,8 +443,14 @@ La finalul task-ului **AppComponent**:
     - acelasi lucru si pentru *contact*
     - **Q**: ce s-a schimbat in afisare? Cum?
     - **Q**: Deschide *devtools* (F12) si observa elementele `<a>`. Click pe link-uri. Ce se intampla?
+
+[Solution on StackBlitz ⚡️](https://stackblitz.com/edit/angular-travel-workshop-09-done)
+
 ___
 # 10. Two way binding
+
+[Edit on StackBlitz ⚡️](https://stackblitz.com/edit/angular-travel-workshop-10)
+
 Angular ne pune la dispozitie mai multe metode de a comunica cu componentele:
 
 1. **@Input**: datele sunt trimise catre componenta
@@ -397,6 +472,8 @@ Componenta `Contact` are doua input-uri folosite la adaugarea unui nou testimoni
 1. Gaseste input-urile
 1. Adauga banane in cutie ca sa poti pune un nou testimonial
 1. Observa sincronizarea live
+
+[Solution on StackBlitz ⚡️](https://stackblitz.com/edit/angular-travel-workshop-10-done)
 
 ### Task 2 (pentru *FB cu stelutza*)
 1. Merg in pagina `Destinatii`, apoi revino in pagina `Contact`
