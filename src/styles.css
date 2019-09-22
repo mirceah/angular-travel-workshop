@@ -1,4 +1,6 @@
 /* Add application styles & imports to this file! */
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
 body {
   background-color: #ddd;
 }
