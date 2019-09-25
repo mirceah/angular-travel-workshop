@@ -207,17 +207,6 @@ Componentele reprezinta modul in care Angular organizeaza si incapsuleaza (izole
   - CSS - stil
   - Typescript - logica
 
-Ele pot fi refolosite in alte componente, devenind astfel componente copil, la fel cum se intampla si cu elementele (tag-urile) HTML.
-```javascript
-  <div>                 // Tag parinte
-    <p>some text</p>    // Tag copil
-  </div>
-
-  <component-parent>                    // Tag componenta parinte
-    <component-child></component-child> // Tag componenta copil
-  </component-parent>
-```
-
 ### Task
 In folderul `src/app` au fost create urmatoarele fisiere:
   - favorite-destination.component.css
